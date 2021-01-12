@@ -1,0 +1,16 @@
+.frm_general{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border: solid 2px black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.frm_general > input,button{
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+}

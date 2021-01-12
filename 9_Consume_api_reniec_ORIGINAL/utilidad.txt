@@ -1,0 +1,11 @@
+//se traza una linea para llegar al negocio
+https://youtu.be/kO_bxPcJLU0
+
+//Marca areas de mapa como para saber donde abrir un nuveo local
+https://www.youtube.com/watch?v=nVFOFT20K-c
+
+//Pintar pais de acuerdo al dato sencillo
+https://www.youtube.com/watch?v=EgbWpNjR5c4
+
+//Sistema crud para crear cuadrados google maps
+https://www.youtube.com/watch?v=rdmO68xJoBs
