@@ -1,0 +1,85 @@
+*************************   PINTAR MAPAS   *********************************************************************************************
+//LOS DE INICIADOR PRO HACEN PROBLEMAS :/
+//FALTA QUE GUARDE EL BOUNDINGBOX Y TIPO POLIGONO insertando por url
+//FALTA QUE LOS CAMPOS DE COORDENADAS NADA MAS SE GUARDEN SIN "" EN LAS COORDENADAS
+//Huanuco huanuco ---> manual da problema
+//Ucayalo         ---> manual da problema
+
+
+
+
+
+
+//Palabras cables dibujar 2 poligonos
+    Dibujar varios polígonos en la API de Google Maps v3 desde la base de datos MySQL
+    google maps remove one polygon of multiple polygons
+    choropleth map
+    
+
+// Graficar 2 poligonos google maps listito pitito
+    http://jsfiddle.net/22vnj/1/
+    https://stackoverflow.com/questions/33709096/how-to-create-multiple-polygons-on-the-same-google-map  ------->Este se asemeja a lo que busco
+    http://jsfiddle.net/jordanarseno/xw6gp9yq/19/
+    http://jsfiddle.net/j0ydpbe5/
+    https://simplemaps.com/resources/shapes-google-maps
+    http://jsfiddle.net/ByPhv/6/ -------->este esta excelente ---> hasta tiene para eliminar poligono :3 
+    https://jsfiddle.net/api/post/library/pure/
+
+
+// Generador data para poligono     
+    https://nominatim.openstreetmap.org/ui/search.html?q=Hu%C3%A1nuco%2Cchurubamba&viewbox=-76.92764%2C-9.22828%2C-74.97757%2C-10.08930&bounded=1,polygon_geojson=1
+    http://www.birdtheme.org/useful/v3tool.html --> 
+    https://mapshaper.org/ --->necesita un geojson para graficarse
+    https://simplemaps.com/
+
+
+
+
+
+
+
+En JavaScript (como sé) hay dos forms en que puede crear variables dinámicas:
+
+Función eval
+object de window
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***este lo hace como lo que pidio el profe Lizbardo
+    http://www.danielpinero.com/como-crear-mapa-geografico-zonas-calor-excel
+
+
+***Aqui le falta cambiar la api por un generador de GEOjson
+    https://codepen.io/Tomik23/pen/rNxMqWW
+
+***Lista todas las librerias para usar mapas
+    https://blog.aulaformativa.com/librerias-de-javascript-plugin-para-crear-mapas-interactivos/
+
+***Data del peru en extension GEOjson
+    https://github.com/juaneladio/peru-geojson
+
+** Como usar la API nominatim 
+    https://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example  -------->documentacion
+
+
+****************************** DETALLE DE LA DOCUMENTACION *****************************************************
+&pretty=1       ---> Le da formato como .min a normal  ---> me quede en esta parte:
+                                                            https://nominatim.org/release-docs/develop/api/Output/
+
+
+
+
