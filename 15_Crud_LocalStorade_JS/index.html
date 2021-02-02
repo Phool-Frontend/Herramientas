@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crud - LocalStorage</title>
+<style>
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: solid 2px blue;
+    margin: 20vh auto;
+}
+.pendex{
+  width: 100%;
+}
+form input{
+  padding: 7px;
+  margin-bottom: 10px;
+}
+body{
+  display: flex;
+}
+table, th, td {
+    border: 1px solid black;
+    margin: 20vh auto;
+}
+</style>
+</head>
+<body>
+<div id="body">
+      <form action="#" id="formulario">
+        <input type="text" name="" id="titulo" placeholder="Ingresar titulo">
+        <input type="text" name="" id="descripcion" placeholder="Ingrese la descripcion">
+        <input type="number" name="" id="precio" placeholder="Ingrese el precio">
+        <input class="pendex" type="submit" value="Agregar">
+      </form>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          
+        </tbody>
+      </table>
+</div>
+</body>
+</html>
+<!--Aqui va los scrips o Javascript Vainilla xd-->
+<script>
+//Evento para crear un nuevo Libro
+document.getElementById("formulario").addEventListener("submit",crear);
+
+//Funcion crear
+function crear(e){
+    titulo = document.getElementById("titulo").value;
+    descripcion = document.getElementById("descripcion").value;
+    precio = document.getElementById("precio").value;
+
+    let libro = {
+      titulo,
+      descripcion,
+      precio
+    }
+
+    if(localStorage.getItem("Libros") === null){
+        let libros = [];
+        libros.push(libro);
+        localStorage.setItem("Libros",JSON.stringify(libros));
+    }else{
+        //let libros = localStorage.getItem(JSON.parse("Libros")); --> En el video antes de probarlo
+        let libros  = JSON.parse(localStorage.getItem("Libros"));
+        libros.push(libro);
+        localStorage.setItem("Libros",JSON.stringify(libros));
+    }
+    leer();
+    document.getElementById("formulario").reset();
+    console.log("Libro guardado correctamente");
+    e.preventDefault();
+}
+
+//Funcion leer
+function leer(){
+        let libros = JSON.parse(localStorage.getItem("Libros"));
+        document.getElementById("tbody").innerHTML = "";
+        for(let i=0; i < libros.length; i++){
+            let titulo      = libros[i].titulo;
+            let descripcion = libros[i].descripcion;
+            let precio      = libros[i].precio;
+
+            document.getElementById("tbody").innerHTML += 
+            `<tr>
+                  <th>${titulo}</th>
+                  <td>${descripcion}</td>
+                  <td>${precio}</td>
+                  <td><button onclick="editar('${titulo}')" class="">Editar</button>
+                  <button onclick="eliminar('${titulo}')" class="">Eliminar</button></td>
+              </tr>`;
+        }
+}
+
+//Funcion editar
+function editar(titulo){
+    let libros = JSON.parse(localStorage.getItem("Libros"));
+    for(let i=0; i<libros.length;i++){
+        if(libros[i].titulo === titulo){
+            document.getElementById("body").innerHTML = `
+                <h2>Editar Libro</h2>
+                <form action="#" id="formulario">
+                  <input type="text" name=""    id="newtitulo" placeholder="${libros[i].titulo}">
+                  <input type="text" name=""    id="newdescripcion" placeholder="${libros[i].descripcion}">
+                  <input type="number" name=""  id="newprecio" placeholder="${libros[i].precio}">
+                  <input class="pendex" onclick="actualizar('${i}')" type="submit" value="Actualizar">
+                  <button onclick="vistaPrincipal()">Cancelar</button>
+                </form>
+            `;
+        }
+    }
+}
+
+//Funcion actualizar
+function actualizar(i){
+  console.log("Estas en actulizar");
+    let libros = JSON.parse(localStorage.getItem("Libros"));
+    libros[i].titulo      = document.getElementById("newtitulo").value;
+    libros[i].descripcion = document.getElementById("newdescripcion").value;
+    libros[i].precio  = document.getElementById("newprecio").value;
+    if(libros[i].titulo == ""){
+        alert("No ha Ingresado el titulo");
+    }else{
+        if(libros[i].descripcion==""){
+            alert("No ha ingresado la descripcion");
+        }else{
+            if(libros[i].precio == ""){
+                alert("No ha ingresado el precio");
+            }else{
+              localStorage.setItem("Libros",JSON.stringify(libros));
+              vistaPrincipal();
+            }
+           
+        }
+        
+    }
+    
+}
+
+//Funcion eliminar
+function eliminar(titulo){
+    //console.log("Estas en eliminar");
+    let libros = JSON.parse(localStorage.getItem("Libros"));
+    for(let i=0; i<libros.length;i++){
+        if(libros[i].titulo === titulo){
+            libros.splice(i,1);
+        }
+    }
+
+    localStorage.setItem("Libros",JSON.stringify(libros));
+    leer();
+}
+
+//Funcion para mostrar la interfaz principal
+function vistaPrincipal(){
+    console.log("Estas en Vista_Principal")
+    document.getElementById("body").innerHTML = `
+    <div id="body">
+        <form action="#" id="formulario">
+          <input type="text" name="" id="titulo" placeholder="Ingresar titulo">
+          <input type="text" name="" id="descripcion" placeholder="Ingrese la descripcion">
+          <input type="number" name="" id="precio" placeholder="Ingrese el precio">
+          <input class="pendex" type="submit" value="Agregar">
+        </form>
+
+        <table>
+            <thead>
+              <tr>
+                <th>Titulo</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              
+            </tbody>
+        </table>
+      </div>
+    `;
+    leer();
+}
+
+
+leer();
+
+</script>
