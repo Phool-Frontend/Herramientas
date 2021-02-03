@@ -1,0 +1,34 @@
+//Palabras de busqueda
+url de redireccionamiento de oauth válidos facebook
+
+
+
+
+//Codigo para probar
+    https://jsfiddle.net/R4g47/238/
+    https://developers.facebook.com/tools/debug     -----> verifica si es cumple politicas de privacidad sin subirlo a un servidor
+
+
+
+
+//URL de paginas sobre el tema
+    https://developers.facebook.com/docs/facebook-login/web
+    https://www.youtube.com/watch?v=3ZkkC9O0vRo
+    https://developers.facebook.com/docs/facebook-login/web/login-button
+    https://www.chrisjmendez.com/2018/04/16/using-ngrok-with-facebook-oauth-login/  -------------> Solucion al dolor de cabezas
+    https://developers.facebook.com/docs/javascript/examples                    -----------------> Todos los ejemplos de aqui funciona
+    https://developers.facebook.com/tools/explorer                   ----------------------------> Hacer pruebas de recepcion GOZU
+    https://stackoverflow.com/questions/11442442/get-user-profile-picture-by-id      ------------> foto jalar de facebook
+    https://www.youtube.com/watch?v=U_S8GELhhiY                                      ------------> La vencida :v Si prende el puto candadito
+    https://www.youtube.com/watch?v=UVuzzk0CGL8                                      ------------> Tiene los 3 logins facebook,google,etc
+
+//Campos que se pueden optener
+    Nick de facebook   
+    Id de usuario de facebook
+        - Si es un grupo se puede obtener:
+            numero de celular
+            likes que tiene el grupo    
+
+//Lista de links generadores de terminos y condiciones probados
+        https://app-privacy-policy-generator.firebaseapp.com/       ---> No dio cagado
+        https://www.king.com/es/privacyPolicy                       ---> Copiandome las politicas de privacidad
