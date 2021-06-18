@@ -1,0 +1,53 @@
+
+
+************** Palabras claves para buscar 
+    getUserMedia()  --- Enfocar camara
+    Toma una foto cuando la cámara se enfoca automáticamente ---> la mas acertada
+    cómo usarlo / polyfill
+    Captura de imágenes MediaStream
+    UserMedia
+    webshim
+    Enfoque de la cámara HTML5 getUserMedia    ---> la mas acertada
+ 
+************** Codigo listito para copiar
+    https://drive.google.com/file/d/15cH82kAsDKACGy7Ljw6BWZTxsB0Tx_UW/view    -----> Generador de codigo de barra
+    http://jsfiddle.net/7EAgz/                                                -----> Sonido en javascript
+    https://uigradients.com/                                                  -----> Codigo css para gradientes gozus
+    https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_loop    -----> Sonido infinito
+    https://stackoverflow.com/questions/3273552/html5-audio-looping           -----> Funciona el audio infinito, por defaul el navegador necesita que precionemos un boton
+
+
+************** Guias entendibles
+    https://www.youtube.com/watch?v=0GIQyqzoSTU&list=PLoRfWwOOv4jyRae3k_oXx1R6l1U9AVvVI&index=4   ------------> Facultad autodidacta
+
+
+******************************** OTROS SIN ORGANIZAR ***************************************************************
+
+    *El man lo hace en HTML css y js encima captura el codigo y lo muestra en pantalla encima configura el sonido
+        https://www.youtube.com/watch?v=Zxv_vOr-xvc
+
+    *En ingles lector de codigo QR + github
+        https://github.com/moemoe89/simple-login-qrcode-webcam-php/blob/master/index.php
+
+    *Lector de codigo de barra (Funciono en mi cel)
+        https://github.com/samuelsonbrito/ler-barcode-js
+        https://www.youtube.com/watch?v=NUWjjddhKRc
+    *Lector de codigo QR
+        https://www.youtube.com/watch?v=6mRf7F1eVPQ
+        https://www.youtube.com/watch?v=Oyzy43K46Ts
+        https://www.youtube.com/watch?v=ah9PDlTpcCk
+
+    *Creador de codigo de barras
+        https://barcode.tec-it.com/es/?data=1235ASD51
+    
+    *Enfocar mejor la camara
+        https://stackoverflow.com/questions/47637708/take-photo-when-the-camera-is-automatically-focused
+
+    *Enfocar mejor la camara 
+        https://jsfiddle.net/rainzhao/4y3xxccm/
+
+    *El elejido que enfoca para codigo de barra
+        https://stackoverflow.com/questions/20219700/html5-getusermedia-camera-focus
+
+    *Respuesta acertada 
+        https://stackoverflow.com/questions/43579704/getusermedia-camera-focus
